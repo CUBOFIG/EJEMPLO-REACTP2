@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Fragment} from 'react';
+import "./styles/styles.scss"
+import Curso from './Curso'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Fragment>
+    <div className="main-banner img-container l-section" id="main-banner">
+      <div className="ed-grid lg-grid-6">
+        <div className="lg-cols-4 lg-x-2">
+          <img className="main-banner__img" alt="banner" src="https://i.pinimg.com/originals/86/69/ab/8669ababbeb05ed394d8aad8629a90e5.jpg"></img>
+          <div className="main-banner__data s-center">
+            <p className="t2 s-mb-0">HERIBERTO FIGUEROA MICHEL</p>
+            <p> ESTUDIANDO REACT</p>
+            <a href="https://youtube.com" className="button">Inicia CUBO</a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div className="ed-grid m-grid-3">
+      <Curso />
+      <Curso />
+      <Curso />
+  </div>
+ </Fragment>
+)
+
 
 export default App;
+
+//reglas JSX
+//1; TODAS LAS ETIQUETAS DEBE CERRARSE
+//2; LOS COMPONENETES DEBEN DEVOLVER UN SOLO ELEMENTO PADRE
+//3; apoyarte de fragment
+//4; Frament => <> hijos </>
+//5; siempre cierran los img
+//6; class pasa a ser className
+//7; for => htmlFor
+
+/*
+<Fragment>
+    <div className="SALUDO">
+      <h1>Hola mundo</h1>
+      <p>Hola, soy Heriberto Figueroa Michel</p>
+    </div>
+    
+    <div>
+      <h1>Hola mundo</h1>
+      <p>Hola, soy Camila Itzel Figueroa Michel</p>
+      <img src="https://png.pngtree.com/element_our/20190528/ourlarge/pngtree-cute-cartoon-light-bulb-image_1134759.jpg"></img>
+    </div>
+  </Fragment>
+*/
