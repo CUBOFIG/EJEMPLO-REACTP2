@@ -9,9 +9,11 @@
     "ed-grid": "^2.9.0",
     "edteam-style-guides": "^0.0.63",
     "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "yarn-install": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
