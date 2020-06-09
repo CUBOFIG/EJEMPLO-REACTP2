@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
 /*const curso=[{
     "nombre":"Curso De React", 
@@ -16,48 +16,55 @@ import PropTypes from 'prop-types'
     "imagenCurso": "https://programacion.net/files/article/20160316010348_vue-js.jpg"
   }]*/
 
-const Curso = ({imagenCurso,nombre,profesor,nameProfesor,price}) =>(
-    <article className="card">
-      <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-        <img src={imagenCurso} alt="Poster de curso"></img>
-      </div>
-      <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
-        <h3 className="t5 s-mb-2 s-center">
-        {nombre}
-        </h3>
-        <div className="s-mb-2 s-main-center">
-          <div className="card__teacher s-cross-center">
-            <div className="card__avatar s-mr-1">
-              <div className="circle img-container">
-                <img src={profesor} alt={nameProfesor}></img>
-              </div>
+const Curso = ({
+  imagenCurso,
+  nombre,
+  profesor,
+  nameProfesor,
+  price,
+  linkC,
+}) => (
+  <article className="card">
+    <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
+      <img src={imagenCurso} alt="Poster de curso"></img>
+    </div>
+    <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
+      <h3 className="t5 s-mb-2 s-center">{nombre}</h3>
+      <div className="s-mb-2 s-main-center">
+        <div className="card__teacher s-cross-center ">
+          <div className="card__avatar s-mr-1">
+            <div className="circle img-container">
+              <img src={profesor} alt={nameProfesor}></img>
             </div>
-            <span className="small">{nameProfesor}</span>
           </div>
-        </div>
-        <div className="s-main-center">
-          <a className="button--ghost-alert button--tiny" href="https://youtube.com">
-            {price}
-          </a>
+          <span className="small">{nameProfesor}</span>
         </div>
       </div>
-    </article>
-    
-)
+      <div className="s-main-center">
+        <a href={linkC} className="button--ghost-alert button--tiny">
+          {price}
+        </a>
+      </div>
+    </div>
+  </article>
+);
 
-Curso.propTypes={
-  imagenCurso:  PropTypes.string,
-  nombre:       PropTypes.string,
-  profesor:     PropTypes.string,
+Curso.propTypes = {
+  imagenCurso: PropTypes.string,
+  nombre: PropTypes.string,
+  profesor: PropTypes.string,
   nameProfesor: PropTypes.string,
-  price:        PropTypes.string
-}
-Curso.defaultProps={
-  imagenCurso: "https://videochums.com/article/switch-exclusive-indie-games-1.jpg",
-  nombre:       "Informacion no encontrada",
-  profesor:     "Informacion no encontrada",
+  price: PropTypes.string,
+  dC: PropTypes.string,
+};
+Curso.defaultProps = {
+  imagenCurso:
+    "https://videochums.com/article/switch-exclusive-indie-games-1.jpg",
+  nombre: "Informacion no encontrada",
+  profesor: "Informacion no encontrada",
   nameProfesor: "Informacion no encontrada",
-  price:        "Informacion no encontrada",
-}
+  price: "Informacion no encontrada",
+  dC: "https://www.google.com",
+};
 
-export default Curso
+export default Curso;
