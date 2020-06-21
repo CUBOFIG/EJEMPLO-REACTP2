@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 /*const curso=[{
     "nombre":"Curso De React", 
@@ -16,40 +17,48 @@ import PropTypes from "prop-types";
     "imagenCurso": "https://programacion.net/files/article/20160316010348_vue-js.jpg"
   }]*/
 
-const Curso = ({
+const CardEs = ({
   imagenCurso,
   nombre,
   profesor,
   nameProfesor,
   price,
-  linkC,
+  id,
+  des,
 }) => (
-  <article className="card">
+  <article className="card ">
     <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-      <img src={imagenCurso} alt="Poster de curso"></img>
+      <Link to={`/cursos/${id}`}>
+        <img src={imagenCurso} alt="Poster de curso"></img>
+      </Link>
     </div>
-    <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
-      <h3 className="t5 s-mb-2 s-center">{nombre}</h3>
-      <div className="s-mb-2 s-main-center">
-        <div className="card__teacher s-cross-center ">
-          <div className="card__avatar s-mr-1">
-            <div className="circle img-container">
-              <img src={profesor} alt={nameProfesor}></img>
-            </div>
+
+    <div class="s-border s-radius-br s-radius-bl s-shadow-bottom s-bg-white">
+      <div class="s-pxy-2">
+        <h3 className="t3 s-mb-2 s-center ">{nombre}</h3>
+        <p class="s-mb-0">{des}</p>
+      </div>
+      <footer class="s-cross-center s-bg-grey s-pxy-2">
+        <div class="s-10 s-mr-1">
+          <div class="circle img-container">
+            <img src={profesor} alt={nameProfesor}></img>
           </div>
-          <span className="small">{nameProfesor}</span>
         </div>
-      </div>
-      <div className="s-main-center">
-        <a href={linkC} className="button--ghost-alert button--tiny">
-          {price}
-        </a>
-      </div>
+        <p class="s-mb-0">{nameProfesor}</p>
+        <div class="s-to-right">
+          <Link
+            to={`/cursos/${id}`}
+            className="button--ghost-alert button--tiny"
+          >
+            {price}
+          </Link>
+        </div>
+      </footer>
     </div>
   </article>
 );
 
-Curso.propTypes = {
+CardEs.propTypes = {
   imagenCurso: PropTypes.string,
   nombre: PropTypes.string,
   profesor: PropTypes.string,
@@ -57,7 +66,7 @@ Curso.propTypes = {
   price: PropTypes.string,
   dC: PropTypes.string,
 };
-Curso.defaultProps = {
+CardEs.defaultProps = {
   imagenCurso:
     "https://videochums.com/article/switch-exclusive-indie-games-1.jpg",
   nombre: "Informacion no encontrada",
@@ -67,4 +76,4 @@ Curso.defaultProps = {
   dC: "https://www.google.com",
 };
 
-export default Curso;
+export default CardEs;

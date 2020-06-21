@@ -1,41 +1,36 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./styles/styles.scss";
-import Curso from "./Curso";
-import cursos from "./Listado";
+import Banner from "./Banner";
+import CardView from "./CardView";
+import Form from "./Form";
+import Course from "./Course.jsx";
+import Navbare from "./components/Navbare/Navbare";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => (
-  <Fragment>
-    <div className="main-banner img-container l-section" id="main-banner">
-      <div className="ed-grid lg-grid-6">
-        <div className="lg-cols-4 lg-x-2">
-          <img
-            className="main-banner__img"
-            alt="banner"
-            src="https://image.freepik.com/foto-gratis/codigo-fuente-escritorio-papel-tapiz-lenguaje-computadora-codificacion-programacion_33771-600.jpg"
-          ></img>
-          <div className="main-banner__data s-center">
-            <p className="t2 s-mb-0">HERIBERTO FIGUEROA MICHEL</p>
-            <p> ESTUDIANDO REACT</p>
-            <a href="https://youtube.com" className="button">
-              Inicia CUBO
-            </a>
-          </div>
-        </div>
+  <Router>
+    <div className="bg-o">
+      <div className="m20">
+        <Navbare />
       </div>
-    </div>
-    <div className="ed-grid m-grid-3">
-      {cursos.map((cursos) => (
-        <Curso
-          nombre={cursos.nombre}
-          price={cursos.price}
-          profesor={cursos.profesor}
-          nameProfesor={cursos.nameProfesor}
-          imagenCurso={cursos.imagenCurso}
-          linkC={cursos.linkC}
+
+      <Switch>
+        <Route path="/" exact component={Banner} />
+        <Route path="/cursos/:id" component={Course} />
+        <Route path="/cursos" component={CardView} />
+        <Route path="/login" exact component={() => <Form name="CUBO" />} />
+
+        <Route
+          component={() => (
+            <div className="ed-grid">
+              <h1>ERRO 404</h1>
+              <span>Página no encontrada</span>
+            </div>
+          )}
         />
-      ))}
+      </Switch>
     </div>
-  </Fragment>
+  </Router>
 );
 export default App;
 
@@ -62,3 +57,5 @@ export default App;
     </div>
   </Fragment>
 */
+
+//match, location, history
