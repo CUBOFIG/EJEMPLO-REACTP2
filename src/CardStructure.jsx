@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
     "imagenCurso": "https://programacion.net/files/article/20160316010348_vue-js.jpg"
   }]*/
 
-const CardEs = ({
+const CardStructure = ({
   imagenCurso,
   nombre,
   profesor,
@@ -58,7 +58,7 @@ const CardEs = ({
   </article>
 );
 
-CardEs.propTypes = {
+CardStructure.propTypes = {
   imagenCurso: PropTypes.string,
   nombre: PropTypes.string,
   profesor: PropTypes.string,
@@ -66,7 +66,7 @@ CardEs.propTypes = {
   price: PropTypes.string,
   dC: PropTypes.string,
 };
-CardEs.defaultProps = {
+CardStructure.defaultProps = {
   imagenCurso:
     "https://videochums.com/article/switch-exclusive-indie-games-1.jpg",
   nombre: "Informacion no encontrada",
@@ -76,4 +76,4 @@ CardEs.defaultProps = {
   dC: "https://www.google.com",
 };
 
-export default CardEs;
+export default CardStructure;

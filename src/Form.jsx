@@ -10,22 +10,22 @@ class Form extends Component {
       contraseña: "",
       fecha: new Date(),
     };
-    this.cambiarNombre = this.cambiarNombre.bind(this);
-    this.cambiarContraseña = this.cambiarContraseña.bind(this);
-    this.cambiarCorreo = this.cambiarCorreo.bind(this);
+    this.changeName = this.changeName.bind(this);
+    this.changePassword = this.changePassword.bind(this);
+    this.changeEmail = this.changeEmail.bind(this);
   }
 
-  cambiarNombre(e) {
+  changeName(e) {
     this.setState({
       nombre: e.target.value,
     });
   }
-  cambiarCorreo(e) {
+  changeEmail(e) {
     this.setState({
       correo: e.target.value,
     });
   }
-  cambiarContraseña(e) {
+  changePassword(e) {
     this.setState({
       contraseña: e.target.value,
     });
@@ -46,15 +46,15 @@ class Form extends Component {
             <div className="ed-grid m-grid-2">
               <div className="form__item">
                 <label> Nombre:</label>
-                <input type="text" onChange={this.cambiarNombre} />
+                <input type="text" onChange={this.changeName} />
               </div>
               <div className="form__item">
                 <label> Correo Electronico:</label>
-                <input type="text" onChange={this.cambiarCorreo} />
+                <input type="text" onChange={this.changeEmail} />
               </div>
               <div className="form__item">
                 <label> Contraseña:</label>
-                <input type="text" onChange={this.cambiarContraseña} />
+                <input type="text" onChange={this.changePassword} />
               </div>
             </div>
           </form>

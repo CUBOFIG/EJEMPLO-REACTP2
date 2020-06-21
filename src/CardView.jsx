@@ -1,12 +1,12 @@
 import React from "react";
-import CardEs from "./CardEs";
-import cursos from "./Listado";
+import CardStructure from "./CardStructure";
+import cursos from "./CoursesList";
 
 const CardView = () => (
   <>
     <div className="ed-grid m-grid-4">
       {cursos.map((cursos) => (
-        <CardEs
+        <CardStructure
           id={cursos.id}
           nombre={cursos.nombre}
           price={cursos.price}

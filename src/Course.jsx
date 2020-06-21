@@ -1,5 +1,5 @@
 import React from "react";
-import cursos from "./Listado";
+import cursos from "./CoursesList";
 
 import "./index.css";
 
