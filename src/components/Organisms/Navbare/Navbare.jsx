@@ -12,7 +12,7 @@ const Navbare = (props) => {
             style={{ textDecoration: "none" }}
             to={"/"}
           >
-            HOME
+            Home
           </Link>
         </div>
 
@@ -26,7 +26,7 @@ const Navbare = (props) => {
                   style={{ textDecoration: "none" }}
                   to={"/cursos"}
                 >
-                  CURSOS
+                  Cursos
                 </NavLink>
               </li>
               <li>
@@ -36,7 +36,7 @@ const Navbare = (props) => {
                   style={{ textDecoration: "none" }}
                   to={"/login"}
                 >
-                  REGISTRATE
+                  Registrate
                 </NavLink>
               </li>
               <li>
@@ -46,7 +46,7 @@ const Navbare = (props) => {
                   style={{ textDecoration: "none" }}
                   to={"/login"}
                 >
-                  PROXIMAMENTE
+                  Proximamente
                 </NavLink>
               </li>
             </ul>

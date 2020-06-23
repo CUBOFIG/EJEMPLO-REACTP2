@@ -1,6 +1,6 @@
 import React from "react";
-import CardStructure from "./CardStructure";
-import cursos from "./CoursesList";
+import CardStructure from "../../Molecules/CardStructure/CardStructure";
+import cursos from "../../Atoms/CoursesList/CoursesList";
 
 const CardView = () => (
   <>

@@ -1,11 +1,14 @@
 import React from "react";
-import "./styles/styles.scss";
-import Banner from "./Banner";
-import CardView from "./CardView";
-import Form from "./Form";
-import Course from "./Course.jsx";
-import Navbare from "./components/Navbare/Navbare";
+import "../styles/styles.scss";
+
+import Home from "./Pages/Home/Home";
+import CardView from "./Organisms/CardView/CardView";
+import FormP from "./Molecules/Form/Form";
+import Course from "./Pages/Course/Course.jsx";
+import Navbare from "./Organisms/Navbare/Navbare";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import History from "./Pages/History/History";
+import Users from "./Pages/Users/Users";
 
 const App = () => (
   <Router>
@@ -15,11 +18,12 @@ const App = () => (
       </div>
 
       <Switch>
-        <Route path="/" exact component={Banner} />
+        <Route path="/" exact component={Home} />
         <Route path="/cursos/:id" component={Course} />
         <Route path="/cursos" component={CardView} />
-        <Route path="/login" exact component={() => <Form name="CUBO" />} />
-
+        <Route path="/historial" component={History} />
+        <Route path="/Usuarios" component={Users} />
+        <Route path="/login" exact component={() => <FormP name="CUBO" />} />
         <Route
           component={() => (
             <div className="ed-grid">

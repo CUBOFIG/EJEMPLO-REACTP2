@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.m20 {
+  margin-bottom: 20px;
+}
+
+.bg-o {
+  min-height: 100vh;
+  background-color: #333;
+}

@@ -1,7 +1,7 @@
 import React from "react";
-import cursos from "./CoursesList";
+import cursos from "../../Atoms/CoursesList/CoursesList";
 
-import "./index.css";
+import "./Course.css";
 
 const Course = ({ match }) => {
   const CursoActual = cursos.filter(
