@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import UserCard from "../../Molecules/UserCard/UserCard";
+import UserView from "../../Organisms/UsersView/UsersView";
 import axios from "axios";
 
 class Users extends Component {
@@ -20,22 +20,16 @@ class Users extends Component {
   render() {
     const { users } = this.state;
 
-    return (
-      <div className="ed-grid">
-        <h1>usuarios</h1>
-        <div className="ed-grid s-grid-2 m-grid-3 l-grid-4">
-          {users.map((e) => (
-            <UserCard
-              key={e.id}
-              name={e.name}
-              address={e.address}
-              username={e.username}
-              email={e.email}
-            />
-          ))}
-        </div>
-      </div>
-    );
+    // if (!users.length)
+    //   return (
+    //     <div className="container">
+    //       <div class="row justify-content-center align-items-center minh-100">
+    //         <Spinnerr />
+    //       </div>
+    //     </div>
+    //   );
+
+    return <UserView users={users} />;
   }
 }
 

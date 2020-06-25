@@ -1,28 +1,27 @@
 import React from "react";
 import "../styles/styles.scss";
-
 import Home from "./Pages/Home/Home";
-import CardView from "./Organisms/CardView/CardView";
 import FormP from "./Molecules/Form/Form";
 import Course from "./Pages/Course/Course.jsx";
 import Navbare from "./Organisms/Navbare/Navbare";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import History from "./Pages/History/History";
 import Users from "./Pages/Users/Users";
+import Courses from "./Pages/Courses/Courses";
+import ExtraPag from "./Pages/ExtraPag/ExtraPag";
 
 const App = () => (
   <Router>
     <div className="bg-o">
-      <div className="m20">
-        <Navbare />
-      </div>
+      <Navbare />
 
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/cursos/:id" component={Course} />
-        <Route path="/cursos" component={CardView} />
+        <Route path="/cursos" component={Courses} />
         <Route path="/historial" component={History} />
-        <Route path="/Usuarios" component={Users} />
+        <Route path="/usuarios" component={Users} />
+        <Route path="/extra" component={ExtraPag} />
         <Route path="/login" exact component={() => <FormP name="CUBO" />} />
         <Route
           component={() => (

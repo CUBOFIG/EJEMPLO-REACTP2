@@ -33,19 +33,19 @@ const CardStructure = ({
       </Link>
     </div>
 
-    <div class="s-border s-radius-br s-radius-bl s-shadow-bottom s-bg-white">
-      <div class="s-pxy-2">
+    <div className="s-border s-radius-br s-radius-bl s-shadow-bottom s-bg-white">
+      <div className="s-pxy-2">
         <h3 className="t3 s-mb-2 s-center ">{nombre}</h3>
-        <p class="s-mb-0">{des}</p>
+        <p className="s-mb-0">{des}</p>
       </div>
-      <footer class="s-cross-center s-bg-grey s-pxy-2">
-        <div class="s-10 s-mr-1">
-          <div class="circle img-container">
+      <footer className="s-cross-center s-bg-grey s-pxy-2">
+        <div className="s-10 s-mr-1">
+          <div className="circle img-container">
             <img src={profesor} alt={nameProfesor}></img>
           </div>
         </div>
-        <p class="s-mb-0">{nameProfesor}</p>
-        <div class="s-to-right">
+        <p className="s-mb-0">{nameProfesor}</p>
+        <div className="s-to-right">
           <Link
             to={`/cursos/${id}`}
             className="button--ghost-alert button--tiny"
