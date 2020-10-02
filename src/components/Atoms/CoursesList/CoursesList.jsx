@@ -8,16 +8,7 @@ const cursos = [
     nameProfesor: "Josse",
     imagenCurso: "https://miro.medium.com/max/3150/0*p4oHn_Px5DokmoAr.png",
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit Ullam",
-  },
-  {
-    id: 2,
-    nombre: "Curso Angular",
-    price: "$600 MX",
-    profesor: "https://laletrade.com/images/jamp/page/JuanSGuarnizo.jpg",
-    nameProfesor: "Manny",
-    imagenCurso:
-      "https://muckibu.de/wp-content/uploads/2014/08/angular_bg1.png",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit Ullam",
+    datos: { x: "jose", y: "pedro" }
   },
   {
     id: 3,

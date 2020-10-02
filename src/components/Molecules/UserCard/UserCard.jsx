@@ -1,6 +1,7 @@
 import React from "react";
 
 const UserCard = ({ name, username, address, email }) => {
+  console.log(address)
   const { city } = address;
   return (
     <article className="card">

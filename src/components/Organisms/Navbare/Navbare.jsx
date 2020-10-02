@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbare.css";
 import { Link, NavLink } from "react-router-dom";
+import CartCounter from "../../Atoms/CartCounter/CartCounter";
 
 const Navbare = (props) => {
   return (
@@ -39,7 +40,16 @@ const Navbare = (props) => {
               Cursos
             </NavLink>
           </li>
-
+          <li>
+            <NavLink
+              activeClassName="activo "
+              className="ss"
+              style={{ textDecoration: "none" }}
+              to={"/usuarios"}
+            >
+              Usuarios
+            </NavLink>
+          </li>
           <li>
             <NavLink
               activeClassName="activo "
@@ -50,6 +60,7 @@ const Navbare = (props) => {
               Registrate
             </NavLink>
           </li>
+
           <li>
             <NavLink
               activeClassName="activo "
@@ -59,6 +70,9 @@ const Navbare = (props) => {
             >
               Proximamente
             </NavLink>
+          </li>
+          <li className="ss m-auto">
+            <CartCounter className=" center " />
           </li>
         </ul>
       </div>

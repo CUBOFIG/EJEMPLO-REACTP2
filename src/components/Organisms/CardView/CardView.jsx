@@ -7,8 +7,10 @@ const CardView = ({ cursos }) => {
   return (
     <>
       <div className="ed-grid m-grid-4 m20">
-        {cursos.map((cursos) => (
+        {cursos.map((cursos, index) => (
           <CardStructure
+            course={cursos}
+            key={index}
             id={cursos.id}
             nombre={cursos.nombre}
             price={cursos.price}

@@ -1,40 +1,15 @@
 import React from "react";
 import "../styles/styles.scss";
-import Home from "./Pages/Home/Home";
-import FormP from "./Molecules/Form/Form";
-import Course from "./Pages/Course/Course.jsx";
-import Navbare from "./Organisms/Navbare/Navbare";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import History from "./Pages/History/History";
-import Users from "./Pages/Users/Users";
-import Courses from "./Pages/Courses/Courses";
-import ExtraPag from "./Pages/ExtraPag/ExtraPag";
+import AppRoutess from "./Routes/AppRoutes";
+import { Provider } from "react-redux";
+import store from "./Redux/store";
 
 const App = () => (
-  <Router>
-    <div className="bg-o">
-      <Navbare />
-
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/cursos/:id" component={Course} />
-        <Route path="/cursos" component={Courses} />
-        <Route path="/historial" component={History} />
-        <Route path="/usuarios" component={Users} />
-        <Route path="/extra" component={ExtraPag} />
-        <Route path="/login" exact component={() => <FormP name="CUBO" />} />
-        <Route
-          component={() => (
-            <div className="ed-grid">
-              <h1>ERRO 404</h1>
-              <span>Página no encontrada</span>
-            </div>
-          )}
-        />
-      </Switch>
-    </div>
-  </Router>
+  <Provider store={store}>
+    <AppRoutess />
+  </Provider>
 );
+
 export default App;
 
 //reglas JSX
@@ -46,13 +21,13 @@ export default App;
 //6; class pasa a ser className
 //7; for => htmlFor
 
+
 /*
 <Fragment>
     <div className="SALUDO">
       <h1>Hola mundo</h1>
       <p>Hola, soy Heriberto Figueroa Michel</p>
     </div>
-    
     <div>
       <h1>Hola mundo</h1>
       <p>Hola, soy Camila Itzel Figueroa Michel</p>

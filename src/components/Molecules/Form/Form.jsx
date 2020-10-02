@@ -9,6 +9,7 @@ class Form extends Component {
       correo: "",
       contraseña: "",
       fecha: new Date(),
+      fechas: new Date().getFullYear(),
     };
     this.changeName = this.changeName.bind(this);
     this.changePassword = this.changePassword.bind(this);
@@ -35,12 +36,16 @@ class Form extends Component {
       fecha: new Date(),
     });
   }
+  cambiadate(e) {
+    this.setState({
+      fechas: new Date(),
+    });
+  }
 
   render() {
     return (
       <>
         <div className="ed-grid">
-          <h1>Formulario {this.props.name}</h1>
           <h2>Fecha actual: {Math.round(this.state.fecha / 1000)}</h2>
           <form action="/hola" id="element">
             <div className="ed-grid m-grid-2">
@@ -61,6 +66,9 @@ class Form extends Component {
           <div>
             <h2>{`Hola ${this.state.nombre}`}</h2>
             <span>{`Tu correo es: ${this.state.correo} y tu contraseña es ${this.state.contraseña}`}</span>
+          </div>
+          <div>
+            <span>{`Tu año es: ${this.state.fechas}`}</span>
           </div>
         </div>
       </>
