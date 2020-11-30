@@ -14,6 +14,7 @@ const withFileUpload = (WrappedComponent) => {
 
     addFile(e) {
       const files = e.target.files;
+      console.log(e) //elimianr esto
       this.fileReader.readAsDataURL(files[0]);
     }
 
