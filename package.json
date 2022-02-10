@@ -12,7 +12,7 @@
     "ed-grid": "^2.9.0",
     "edteam-style-guides": "^0.0.63",
     "jquery": "^3.5.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "popper.js": "^1.16.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
